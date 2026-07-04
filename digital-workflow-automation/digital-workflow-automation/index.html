@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Workflow Automation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ Header ============ -->
+  <header>
+    <div>
+      <p class="eyebrow">Digital Workflow Automation</p>
+      <h1>Let the busywork run itself</h1>
+    </div>
+    <div class="header-actions">
+      <div class="stat-pill"><span class="dot"></span> 6 workflows running</div>
+      <button class="btn-primary" id="newWorkflowBtn">+ New workflow</button>
+    </div>
+  </header>
+
+  <!-- ============ Signature: live pipeline ============ -->
+  <section class="card pipeline-card">
+    <div class="pipeline-head">
+      <h3>Live pipeline · <span class="pipeline-name">New High-Priority Ticket</span></h3>
+      <span class="tag running">Running</span>
+    </div>
+    <div class="pipeline-canvas" id="pipelineCanvas">
+      <!-- nodes + animated svg connectors injected by script.js -->
+    </div>
+  </section>
+
+  <!-- ============ KPI row ============ -->
+  <section class="grid kpi-grid">
+    <div class="card kpi-card">
+      <p class="kpi-label">Active workflows</p>
+      <p class="kpi-value">18</p>
+      <p class="kpi-delta up">▲ 2 this week</p>
+    </div>
+    <div class="card kpi-card">
+      <p class="kpi-label">Runs today</p>
+      <p class="kpi-value">1,284</p>
+      <p class="kpi-delta up">▲ 9%</p>
+    </div>
+    <div class="card kpi-card">
+      <p class="kpi-label">Success rate</p>
+      <p class="kpi-value">98.6%</p>
+      <p class="kpi-delta down">▼ 0.3%</p>
+    </div>
+    <div class="card kpi-card">
+      <p class="kpi-label">Hours saved / week</p>
+      <p class="kpi-value">142</p>
+      <p class="kpi-delta up">▲ 11</p>
+    </div>
+  </section>
+
+  <div class="grid main-grid">
+
+    <!-- ============ Workflow list ============ -->
+    <section class="card workflows-card">
+      <h3>Your Workflows</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Workflow</th>
+            <th>Trigger</th>
+            <th>Last run</th>
+            <th>Success</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="workflowsBody"></tbody>
+      </table>
+    </section>
+
+    <!-- ============ Run log ============ -->
+    <section class="card log-card">
+      <h3>Execution Log</h3>
+      <div class="log-list" id="logList"></div>
+    </section>
+
+  </div>
+
+  <!-- ============ Integrations ============ -->
+  <section class="card integrations-card">
+    <h3>Connected Apps</h3>
+    <div class="integrations-grid" id="integrationsGrid"></div>
+  </section>
+
+  <footer>
+    <span>Digital Workflow Automation · demo data</span>
+    <span>Engine v2.4 · region: ap-south-1</span>
+  </footer>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
